@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily Reading · Cited by the Stars</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>Daily Reading</h1>
+      <p class="tagline">Every sentence is cited to a real data point. No magic, just planets.</p>
+    </header>
+
+    <form id="form" class="controls" autocomplete="off">
+      <label>
+        Sign
+        <select id="sign" required>
+          <option value="aries">Aries</option>
+          <option value="taurus">Taurus</option>
+          <option value="gemini">Gemini</option>
+          <option value="cancer">Cancer</option>
+          <option value="leo">Leo</option>
+          <option value="virgo">Virgo</option>
+          <option value="libra">Libra</option>
+          <option value="scorpio">Scorpio</option>
+          <option value="sagittarius">Sagittarius</option>
+          <option value="capricorn">Capricorn</option>
+          <option value="aquarius">Aquarius</option>
+          <option value="pisces">Pisces</option>
+        </select>
+      </label>
+      <label>
+        Date
+        <input id="date" type="date" required />
+      </label>
+      <button type="submit">Get reading</button>
+    </form>
+
+    <section id="status" class="status" hidden></section>
+
+    <section id="result" class="result" hidden>
+      <h2 id="result-title"></h2>
+      <ol id="reading" class="reading"></ol>
+
+      <details class="data-pane">
+        <summary>Show the data</summary>
+
+        <h3>Planetary positions</h3>
+        <table id="positions" class="positions">
+          <thead><tr><th>Body</th><th>Sign</th></tr></thead>
+          <tbody></tbody>
+        </table>
+
+        <h3>Aspects</h3>
+        <table id="aspects" class="aspects">
+          <thead><tr><th>Pair</th><th>Type</th><th>Orb (°)</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </details>
+    </section>
+  </main>
+
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

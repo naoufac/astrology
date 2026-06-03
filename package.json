@@ -1,0 +1,28 @@
+{
+  "name": "astrology",
+  "version": "0.1.0",
+  "description": "Daily horoscope with cited planetary data — every claim traceable to public ephemeris.",
+  "main": "server.js",
+  "type": "module",
+  "license": "MIT",
+  "author": "Anouf <anouf@nchobah.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naoufac/astrology.git"
+  },
+  "bugs": {
+    "url": "https://github.com/naoufac/astrology/issues"
+  },
+  "homepage": "https://github.com/naoufac/astrology#readme",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/test-verify.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "astronomy-engine": "^2.1.19",
+    "fastify": "^4.28.1"
+  }
+}
